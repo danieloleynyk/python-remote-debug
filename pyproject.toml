@@ -1,0 +1,7 @@
+[tool.coverage.run]
+omit = [
+    "/.venvs/*"
+]
+
+[tool.coverage.report]
+fail_under = 80

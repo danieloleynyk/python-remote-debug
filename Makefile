@@ -7,3 +7,10 @@ init:
 
 venv:
 	@sshpass -p password ssh -t root@localhost -p 9922 "zsh"
+
+coverage:
+	@pytest --cov
+	@coverage html
+
+test:
+	@pytest

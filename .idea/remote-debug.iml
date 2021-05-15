@@ -7,4 +7,11 @@
     <orderEntry type="jdk" jdkName="Remote Python 3.8.8 (sftp://root@localhost:9922/.venvs/venv/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="format" value="GOOGLE" />
+    <option name="myDocStringFormat" value="Google" />
+  </component>
 </module>

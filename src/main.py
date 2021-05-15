@@ -1,3 +1,4 @@
+"""Main module."""
 from src.console import main
 
 

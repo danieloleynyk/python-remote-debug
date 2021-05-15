@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "53e5b0c1231ed597e7cad2f26eda2637c6e9c671682e74a8fb2df89edf96e432"
+            "sha256": "fbb31d78fb60a452093fde9f7e0109d98aa80e6ea4c01f06a1166cf1d361493b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -121,6 +121,14 @@
             "index": "pypi",
             "version": "==5.5"
         },
+        "darglint": {
+            "hashes": [
+                "sha256:aa605ef47817a6d14797d32b390466edab621768ea4ca5cc0f3c54f6d8dcaec8",
+                "sha256:ac6797bcc918cd8d8f14c168a4a364f54e1aeb4ced59db58e7e4c6dfec2fe15c"
+            ],
+            "index": "pypi",
+            "version": "==1.8.0"
+        },
         "flake8": {
             "hashes": [
                 "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b",
@@ -159,6 +167,14 @@
             ],
             "index": "pypi",
             "version": "==21.4.3"
+        },
+        "flake8-docstrings": {
+            "hashes": [
+                "sha256:99cac583d6c7e32dd28bbfbef120a7c0d1b6dde4adb5a9fd441c4227a6534bde",
+                "sha256:9fe7c6a306064af8e62a055c2f61e9eb1da55f84bb39caef2b84ce53708ac34b"
+            ],
+            "index": "pypi",
+            "version": "==1.6.0"
         },
         "flake8-import-order": {
             "hashes": [
@@ -279,6 +295,13 @@
                 "sha256:c389c1d06bf7904078ca03399a4816f974a1d590090fecea0c63ec26ebaf1cef"
             ],
             "version": "==2.7.0"
+        },
+        "pydocstyle": {
+            "hashes": [
+                "sha256:164befb520d851dbcf0e029681b91f4f599c62c5cd8933fd54b1bfbd50e89e1f",
+                "sha256:d4449cf16d7e6709f63192146706933c7a334af7c0f083904799ccb851c50f6d"
+            ],
+            "version": "==6.0.0"
         },
         "pyflakes": {
             "hashes": [
@@ -403,6 +426,13 @@
                 "sha256:a9a7479e4c572e2e775c404dcd3080c8dc49f39918c2cf74913d30c4c478e3c2"
             ],
             "version": "==4.0.0"
+        },
+        "snowballstemmer": {
+            "hashes": [
+                "sha256:b51b447bea85f9968c13b650126a888aabd4cb4463fca868ec596826325dedc2",
+                "sha256:e997baa4f2e9139951b6f4c631bad912dfd3c792467e2f03d7239464af90e914"
+            ],
+            "version": "==2.1.0"
         },
         "stevedore": {
             "hashes": [

@@ -1,4 +1,4 @@
-remote-debug template
+python-remote-debug template
 =====================
 
 What's it?

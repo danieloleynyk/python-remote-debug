@@ -2,17 +2,17 @@ import click
 
 
 @click.group()
-def main():
+def main() -> None:
     click.echo("main")
 
 
 @click.command()
-def start():
+def start() -> None:
     click.echo("start command")
 
 
 @click.command()
-def stop():
+def stop() -> None:
     click.echo("stop command")
 
 

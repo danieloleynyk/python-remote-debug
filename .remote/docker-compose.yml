@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+#  The main service, you can add more things if you want
+#  but please don't change the existing code
+  dev:
+    build:
+      context: ../
+      dockerfile: ./.remote/Dockerfile
+    volumes:
+      - ../:/workspace
+    ports:
+      - '9922:22'
+
+# Add more services to your needs here:
+#
+#
+#
+#

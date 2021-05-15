@@ -1,6 +1,6 @@
 import click
-import pytest
 from click.testing import CliRunner
+import pytest
 
 from src import console
 

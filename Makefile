@@ -14,3 +14,7 @@ coverage:
 
 test:
 	@pytest
+
+lint:
+	@flake8
+	@black ./

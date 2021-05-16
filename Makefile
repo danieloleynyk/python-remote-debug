@@ -8,12 +8,12 @@ init:
 venv:
 	@sshpass -p password ssh -t root@localhost -p 9922 "zsh"
 
+test:
+	@pytest
+
 coverage:
 	@pytest --cov
 	@coverage html
-
-test:
-	@pytest
 
 lint:
 	@flake8

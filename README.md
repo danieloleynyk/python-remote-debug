@@ -1,23 +1,32 @@
-python-remote-debug template
+python-seed template
 =====================
 
 What's it?
 ----------
-This is a template contains all the needed tools to remote debug <br/> using 
-pycharm-professional (tested on 2021.1 version)
+This is an opinionated template that contains all the needed tools to develop production ready 
+python apps, some features that can be found in this template: <br/> 
+- remote container debug using pycharm-professional (tested on 2021.1 version)
+- linting, using flake8 with some useful plugins
+- formatting, using black
+- testing, coverage, using pytest & coverage
+- type safety
 
-Sadly there is no way to make it work on the community edition since I'm using <br/>
-some features that are only available on the professional version (ssh interpreter)
+Sadly there is no way to make remote container debugging work on
+the community edition since I'm using some features that are only available on the 
+professional version (ssh interpreter)
 
 Motivation
 ----------
-My goal was to achieve a fully containerized development environment, something similar
-to vscode's remote-containers extension.
-Unfortunately I've encountered numerous issues during my attempts which brought me to issues
-that were opened 5-7 years ago on jetbrain's youtrack issues platform... <br/>
+My goal was to achieve a fully containerized batteries included development environment,
+getting the option to remote debug (similarly to vscode's dev containers) 
+my python code was my mail goal, unfortunately I've encountered numerous issues 
+during my attempts which brought me to issues that were opened 5-7 years ago on jetbrain's 
+youtrack issues platform... <br/>
 Side note, this is kind of sad the amount of workarounds that I had to make in order
 to make it work, there is no reason that such a simple feature would be that hard to achieve
-especially in a paid product...
+especially in a paid product... <br/>
+During the process I've decided to take it a step further and also add all the needed tools to
+make it a batteries included template`(testing, linting, formatting)`
 
 How does it work?
 -----------------
@@ -45,12 +54,25 @@ How does it work?
       our pycharm.
   
 - change the `Dockerfile` and the `docker-compose.yml` to your needs this is a flexable setup
-  
+- testing are achieved using pytest
+- coverage using `coverage & pytest`
+- linting, using `flake8` and some additional plugins, take a note this is definitely an opinionated
+setup, you can change `.flake8` to your needs
+- formatting, using `black` yet another opinionated tool, if you don't like it go ahead and remove it :)
+- type safety, using `mypy` currently seems kind of redundant since pycharm already make all
+the heavy lifting for typing anyways, might be useful later within a ci pipe...
+- docstrings, configured to use the Google format
+- dependency management, using `pipenv` you can also try `poetry` instead.
+
 - there are a few simple `make` commands that will make your life a bit easier
     - `make init` will spin up the `docker-compose.yml`
     - `make venv` will spin up a remote ssh terminal with venv activated, 
       use all your `pip & pipenv` inside this remote terminal.
-      
+    - `make clean` will clean pycharm cache (a workaround one of the issues with pycharm...)
+    - `make test` runs all the tests
+    - `make coverage` spins up all the tests and generate a `coverage report`
+    - `make lint` run `flake8` and `black`
+
 Setting up pycharm
 ------------------
 - spin up your dev container using `make init venv`
@@ -78,6 +100,12 @@ Known Issues
     - I've solved it using `make clean` which goes to your pycharm's cache directory and removes it. <br/>
         * be careful it removes all the cached packages in all the projects that are saved on your 
           host machine.
+
+Roadmap
+-------
+- add documentation generation e.g: `sphinx`
+- add a basic ci pipeline which will run: `linting, formatting, tests, type checks...`
+- add support for vscode
 
 Help
 ----
